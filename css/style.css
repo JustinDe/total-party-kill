@@ -1,0 +1,36 @@
+body, html {
+	height: 100%;
+}
+
+#GameBoard{
+	width: 100%;
+	height: 100%;
+	background: skyblue;
+	display: table;
+}
+
+#CharacterPanel{
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 80px;
+}
+
+#row1, #row2{
+	float: left;
+}
+
+#row1 .PartyMember:last-child, #row2 .PartyMember:last-child{
+	margin-bottom: 0;	
+}
+
+#row2{
+	margin-left: 100px;
+	margin-top: 90px;
+}
+
+.PartyMember{
+	height: 180px;
+	width: 140px;
+	background: red;
+	margin-bottom: 40px;
+}
