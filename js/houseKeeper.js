@@ -3,6 +3,7 @@ console.log("houseKeeper script connected");
 var usedHeros = [];
 var currentHeros = [];
 var currentMonsters = [];
+
 linkingHero = 
 {
 	1: heroMani.Hero01,
@@ -18,15 +19,15 @@ linkingHero =
 
 linkingMonster = 
 {
-	1: monsterMani.Monster01,
-	2: monsterMani.Monster02,
-	3: monsterMani.Monster03,
-	4: monsterMani.Monster04,
-	5: monsterMani.Monster05,
-	6: monsterMani.Monster06,
-	7: monsterMani.Monster07,
-	8: monsterMani.Monster08,
-	9: monsterMani.Monster09
+	1: monsterMani.Enemy01,
+	2: monsterMani.Enemy02,
+	3: monsterMani.Enemy03,
+	4: monsterMani.Enemy04,
+	5: monsterMani.Enemy05,
+	6: monsterMani.Enemy06,
+	7: monsterMani.Enemy07,
+	8: monsterMani.Enemy08,
+	9: monsterMani.Enemy09
 }
 
 function newHero()
@@ -66,12 +67,15 @@ function newCombat()
 	if(numOfEnemies <= 3)
 	{
 		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+		currentMonsters.push("");
+		currentMonsters.push("");
 
 	}
 	if(numOfEnemies > 3 && numOfEnemies < 6)
 	{
 		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
 		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+		currentMonsters.push("");
 	}
 	if(numOfEnemies == 6)
 	{
@@ -83,3 +87,6 @@ function newCombat()
 
 newGame();
 newCombat();
+
+console.log("(houseKeeper) Current Heros: " + currentHeros);
+console.log("(houseKeeper) Current Monsters: " + currentMonsters);

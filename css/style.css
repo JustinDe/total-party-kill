@@ -6,7 +6,8 @@ body, html {
 #GameBoard{
 	width: 100%;
 	height: 100%;
-	background: skyblue;
+	background: url('http://fc04.deviantart.net/fs44/i/2009/134/9/0/Stone_Dungeon_Floor_by_pfunked.jpg') top center;
+	background-size: cover;
 	display: table;
 	overflow: hidden;
 }
@@ -40,6 +41,8 @@ body, html {
 	position: relative;
 	left: 0;
 	margin-left:0;
+	-webkit-box-shadow: 1px 8px 10px 3px rgba(000,000,000,.5);
+	box-shadow: 1px 8px 10px 3px rgba(000,000,000,.5);
 }
 
 .PartyMemberOff{
@@ -52,7 +55,7 @@ body, html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	background:url('../images/ui/MenuNoiseTexture.png');
-	border-style: solid; border-width: 7px; -moz-border-image: url('../images/ui/MenuBorder.png') 7 repeat; -webkit-border-image: url('../images/ui/MenuBorder.png') 7 repeat; -o-border-image: url('../images/ui/MenuBorder.png') 7 repeat; border-image: url('../images/ui/MenuBorder.png') 7 repeat;
+	border-style: solid; border-width: 15px; -moz-border-image: url('../images/ui/MenuBorder.png') 15; -webkit-border-image: url('../images/ui/MenuBorder.png') 15; -o-border-image: url('../images/ui/MenuBorder.png') 15; border-image: url('../images/ui/MenuBorder.png') 15;
 	display:none;
 	left:100%;
 	list-style: none;
@@ -65,7 +68,7 @@ body, html {
 	color: #fff;
 	text-shadow: 1px 1px 2px #000000;
 	overflow: hidden;
-	border-radius: 4px;
+	border-radius: 22px;
 }
 
 .PartyMember.Open > ul
@@ -126,4 +129,11 @@ body, html {
 	width: 140px;
 	background: red;
 	margin-bottom: 40px;
+	-webkit-box-shadow: 1px 8px 10px 3px rgba(000,000,000,.5);
+	box-shadow: 1px 8px 10px 3px rgba(000,000,000,.5);
+}
+
+.enemyAction{
+	width: 100%;
+	height: 100%;
 }
