@@ -17,7 +17,8 @@
 	    "JoinBark":"Need some help? You won't do better than ol' Rekka.",
 	    "ChestBark":"I can use that.",
 	    "AbandonedBark":"...I guess you're right. Go then. Maybe we'll meet again.",
-	    "DeathBark":"This can't... I can't... no..."
+	    "DeathBark":"This can't... I can't... no...",
+	    "Portrait": "/images/character/youdeadson.jpg"
 	},
 	"Hero02":
 	{
@@ -37,7 +38,8 @@
 		"JoinBark":"More strangers? Join me. We can escape this place, and seek our revenge together!",
 		"ChestBark":"Give that here.",
 		"AbandonedBark":"Leaving? Go on then. I can still fight. I'll gather your bones where I find them.",
-		"DeathBark":"Ungh... that one's... past the armor..."
+		"DeathBark":"Ungh... that one's... past the armor...",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
 	"Hero03":
 	{
@@ -57,7 +59,8 @@
 		"JoinBark":"Dame Lizen of Holg, at your service. Perhaps we might join forces? At least until we are free of this place.",
 		"ChestBark":"Supplies, eh? Just in time.",
 		"AbandonedBark":"Go on. You'll be fine without me. I'll hold this passage for as long as I can. ",
-		"DeathBark":"This is it! All I have left!"
+		"DeathBark":"This is it! All I have left!",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
 	"Hero04":
 	{
@@ -77,7 +80,8 @@
 		"JoinBark":"Well, how do you like this? My own compatriots didn't make it far. Maybe we can do better together?",
 		"ChestBark":"Ah, perfect!",
 		"AbandonedBark":"Cowards! You'd better hope I die here. I'll come for you!",
-		"DeathBark":"Grr... I'm not... finished..."
+		"DeathBark":"Grr... I'm not... finished...",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
 	"Hero05":
 	{
@@ -97,7 +101,8 @@
 		"JoinBark":"It is not ordained that we should die here. Not all of us...",
 		"ChestBark":"How precious...",
 		"AbandonedBark":"I see. So this is my fate. But I wonder, what will become of you?",
-		"DeathBark":"Go! You must reach the end without me!"
+		"DeathBark":"Go! You must reach the end without me!",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
 	"Hero06":
 	{
@@ -117,7 +122,8 @@
 		"JoinBark":"We are all ill-fortuned, no? Certainly 'tis better to ally?",
 		"ChestBark":"Ah, what luck!",
 		"AbandonedBark":"I will not be put aside so brusquely. Pray that your paths do not cross mine ever again.",
-		"DeathBark":"This I give... and nothing more."
+		"DeathBark":"This I give... and nothing more.",
+		"Portrait": "/images/character/testCharacter1.jpg"
 	},
 	"Hero07":
 	{
@@ -137,7 +143,8 @@
 		"JoinBark":"(A masked figure meets you with a silent nod. He will join you, if you will have him.)",
 		"ChestBark":"DRUX...?",
 		"AbandonedBark":"(Zyra is silent. You feel a sense of resignation, and of fear.)",
-		"DeathBark":"GED... GED... GED... GED... GED... GED... GED... GED..."
+		"DeathBark":"GED... GED... GED... GED... GED... GED... GED... GED...",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
 	"Hero08":
 	{
@@ -157,7 +164,8 @@
 		"JoinBark":"I am Hans Undreth. Perhaps you know the stories? Perhaps I have a legend or two left in store...",
 		"ChestBark":"How timely.",
 		"AbandonedBark":"I understand. All I once was... reduced to this. Shameful. Leave me. Please...",
-		"DeathBark":"I am... overcome..."
+		"DeathBark":"I am... overcome...",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
 	"Hero09":
 	{
@@ -177,9 +185,10 @@
 		"JoinBark":"The name's Marle. Looks like we're headin' the same way. Mind if I tag along?",
 		"ChestBark":"I'll take that!",
 		"AbandonedBark":"That's how it is? Ye won't make it far without me.",
-		"DeathBark":"Really... like this, eh?"
+		"DeathBark":"Really... like this, eh?",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
-	"Hero010":
+	"Hero10":
 	{
 		"Name":"Vho Lo'ka",
 		"DescOnJoin":"who bound death to life with threads of gold",
@@ -197,9 +206,10 @@
 		"JoinBark":"You on your way out? Smart. Escape's the only thing of value here.",
 		"ChestBark":"Ha! What a find!",
 		"AbandonedBark":"What? No! You can't leave me! Not like this!",
-		"DeathBark":"Oh... oh no... not like this..."
+		"DeathBark":"Oh... oh no... not like this...",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
-	"Hero011":
+	"Hero11":
 	{
 		"Name":"Vinsomen Hordry",
 		"DescOnJoin":"who blotted his name in the ledgers of death, and lives yet wrongly",
@@ -217,9 +227,10 @@
 		"JoinBark":"Vinsomen Hordry's the name. I can't tell you where we are, but when it comes to cheating death, I'm an old hand. Shall we?",
 		"ChestBark":"Just what I needed!",
 		"AbandonedBark":"Me? Go? Just like that? Fine, I suppose. Perhaps there are others in need of rescue here. At least one, I'm certain.",
-		"DeathBark":"Hmm... that's that. Sorry friends..."
+		"DeathBark":"Hmm... that's that. Sorry friends...",
+		"Portrait": "/images/character/youdeadson.jpg"
 	},
-	"Hero012":
+	"Hero12":
 	{
 		"Name":"Unlucky Yarko",
 		"DescOnJoin":"who stalked and slew the yellow magisters, and hears their whispers still",
@@ -237,6 +248,7 @@
 		"JoinBark":"Yarko. I'm Yarko? Are you leaving? I'll go with you. I'm very handy, very sneaky.",
 		"ChestBark":"Ooh! Give it. Give it!",
 		"AbandonedBark":"What? No. Don't leave me. I know things! I hear things. You can't go. You can't leave me!",
-		"DeathBark":"No, no... quiet! Be quiet!"
+		"DeathBark":"No, no... quiet! Be quiet!",
+		"Portrait": "/images/character/youdeadson.jpg"
 	}
 }

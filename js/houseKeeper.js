@@ -1,6 +1,7 @@
 console.log("houseKeeper script connected");
 
-var usedHero = [];
+var usedHeros = [];
+var currentHeros = [];
 linkingHero = 
 {
 	1: heroMani.Hero01,
@@ -19,10 +20,11 @@ function newHero()
 	foundNewChar = false;
 	do{
 		var randChar = Math.floor(Math.random() * 9) + 1;
-		if($.inArray(randChar, usedHero) == -1)
+		if($.inArray(randChar, usedHeros) == -1)
 		{
-			usedHero.push(randChar);
-			console.log("(newHero) Added " + randChar + " to usedHero list");
+			usedHeros.push(randChar);
+			currentHeros.push(randChar);
+			console.log("(newHero) Added " + randChar + " to usedHeros list");
 			return randChar;
 			foundNewChar = true;
 		}
@@ -32,17 +34,13 @@ function newHero()
 
 function newGame()
 {
-	localStorage.clear();
-	console.log("(newGame) localStorage cleared");
-	console.log("(newGame) Adding first 5 heros to usedHeros");
+	usedHeross = [];
+	currentHeros = [];
+	console.log("(newGame) usedHeross and currentHeros cleared");
+	console.log("(newGame) Adding first 5 heros to usedHeross");
 	for(var i = 1; i <= 5; i++)
 	{
-		localStorage.setItem("PartyMember" + i, newHero());
-		localStorage.setItem("PartyMember" + i + "Attack1", true)
-		localStorage.setItem("PartyMember" + i + "Attack2", true)
-		localStorage.setItem("PartyMember" + i + "Special1", true)
-		localStorage.setItem("PartyMember" + i + "Special2", true)
-		localStorage.setItem("PartyMember" + i + "RunAway", true)
+		newHero();
 	}
 	localStorage.setItem("Turn", 0);
 	localStorage.setItem("Points", 0);
@@ -53,7 +51,7 @@ newGame();
 
 
 
-console.log(linkingHero[localStorage.getItem("PartyMember1")].Name);
+console.log(linkingHero[localStorage.getItem("PartyMember1")].Attack1[0]);
 console.log(linkingHero[localStorage.getItem("PartyMember2")].Name);
 console.log(linkingHero[localStorage.getItem("PartyMember3")].Name);
 console.log(linkingHero[localStorage.getItem("PartyMember4")].Name);

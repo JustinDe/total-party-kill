@@ -5,7 +5,7 @@ var heroMani;
 
 function getManifest()
 {
-	$.getJSON("characterManifest.json", function(charMani)
+	$.getJSON("/js/characterManifest.json", function(charMani)
 	{
 		heroLookup(charMani);   
 	})
