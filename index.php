@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 	<link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
@@ -18,8 +18,8 @@
 						<li class="Attack">Fireball <span class="AttackDamageAmount">2</span></li>
 						<li class="Attack">Blizzard <span class="AttackDamageAmount">1</span></li>
 						<li class="Attack">Sheild Bash</li>
-						<li class="Attack">Poop</li>
-						<li class="Attack Used">Run Away</li>
+						<li class="Attack Used">Poop</li>
+						<li class="Attack">Run Away</li>
 					</ul>
 				</div>
 				<div id="MemberSlot2" class="PartyMember"></div>

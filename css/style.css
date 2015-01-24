@@ -33,7 +33,7 @@ body, html {
 .PartyMember{
 	height: 180px;
 	width: 140px;
-	background: red;
+	background: green;
 	margin-bottom: 40px;
 	position: relative;
 }
@@ -60,6 +60,11 @@ body, html {
 	border-radius: 4px;
 }
 
+.PartyMember:hover > ul, .PartyMember:focus > ul, .PartyMember:active > ul
+{
+	display:block;
+}
+
 .PartyMember ul li{
 	margin-bottom: 10px;
 	font-weight: bold;
@@ -69,11 +74,31 @@ body, html {
 	text-indent: 8px;
 }
 
+.PartyMember ul li:last-child{
+	margin-bottom: 0;
+}
+
+.PartyMember ul li.Used{
+	text-decoration: line-through;
+	color: red;
+}
+
 .PartyMember ul li:hover{
 	background: yellow;
 }
 
-.PartyMember:hover > ul
-{
-	display:block
+#EnemyPanel{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#row3 .Enemy:last-child{
+	margin-bottom: 0;	
+}
+
+.Enemy{
+	height: 180px;
+	width: 140px;
+	background: red;
+	margin-bottom: 40px;
 }
