@@ -2,6 +2,7 @@ console.log("houseKeeper script connected");
 
 var usedHeros = [];
 var currentHeros = [];
+var currentMonsters = [];
 linkingHero = 
 {
 	1: heroMani.Hero01,
@@ -13,6 +14,19 @@ linkingHero =
 	7: heroMani.Hero07,
 	8: heroMani.Hero08,
 	9: heroMani.Hero09
+}
+
+linkingMonster = 
+{
+	1: monsterMani.Monster01,
+	2: monsterMani.Monster02,
+	3: monsterMani.Monster03,
+	4: monsterMani.Monster04,
+	5: monsterMani.Monster05,
+	6: monsterMani.Monster06,
+	7: monsterMani.Monster07,
+	8: monsterMani.Monster08,
+	9: monsterMani.Monster09
 }
 
 function newHero()
@@ -42,17 +56,30 @@ function newGame()
 	{
 		newHero();
 	}
-	localStorage.setItem("Turn", 0);
-	localStorage.setItem("Points", 0);
+}
+
+function newCombat()
+{
+	currentMonsters = [];
+	console.log("(newCombat) currentMonsters and currentHeros cleared");
+	var numOfEnemies = Math.floor(Math.random() * 6) + 1;
+	if(numOfEnemies <= 3)
+	{
+		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+
+	}
+	if(numOfEnemies > 3 && numOfEnemies < 6)
+	{
+		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+	}
+	if(numOfEnemies == 6)
+	{
+		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+	}
 }
 
 newGame();
-
-
-
-
-console.log(linkingHero[localStorage.getItem("PartyMember1")].Attack1[0]);
-console.log(linkingHero[localStorage.getItem("PartyMember2")].Name);
-console.log(linkingHero[localStorage.getItem("PartyMember3")].Name);
-console.log(linkingHero[localStorage.getItem("PartyMember4")].Name);
-console.log(linkingHero[localStorage.getItem("PartyMember5")].Name);
+newCombat();

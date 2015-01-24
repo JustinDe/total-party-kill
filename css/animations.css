@@ -1,4 +1,72 @@
 .SaveYourSelf{
-	left: -800px;
+	margin-left: -800px;
 	transition: all .6s ease-in;
 }
+
+/* Shake */
+@-webkit-keyframes shake {
+	0%, 100% {
+		-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+	}
+
+	20%, 60% {
+		-webkit-transform: translate3d(-40px, 0, 0);
+				transform: translate3d(-40px, 0, 0);
+	}
+
+	40%, 80% {
+		-webkit-transform: translate3d(40px, 0, 0);
+				transform: translate3d(40px, 0, 0);
+	}	
+
+}
+
+@keyframes shake {
+	0%, 100% {
+		-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+	}
+
+	20%, 60% {
+		-webkit-transform: translate3d(-40px, 0, 0);
+				transform: translate3d(-40px, 0, 0);
+	}
+
+	40%, 80% {
+		-webkit-transform: translate3d(40px, 0, 0);
+				transform: translate3d(40px, 0, 0);
+	}	
+}
+
+.shake {
+  -webkit-animation-name: shake;
+		  animation-name: shake;
+   -webkit-animation-duration: .5s;
+			  animation-duration: .5s;
+	  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+}
+/* End Shake */
+
+/* Death */
+@-webkit-keyframes death {
+0%   { opacity: 1; }
+  100% { opacity: 0; }
+
+}
+
+@keyframes death {
+0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.death {
+  -webkit-animation-name: death;
+		  animation-name: death;
+   -webkit-animation-duration: 1s;
+			  animation-duration: 1s;
+	  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+}
+/* End Death */

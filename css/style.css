@@ -39,6 +39,7 @@ body, html {
 	margin-bottom: 40px;
 	position: relative;
 	left: 0;
+	margin-left:0;
 }
 
 .PartyMemberOff{
@@ -88,6 +89,7 @@ body, html {
 .PartyMember ul li.Used{
 	text-decoration: line-through;
 	color: red;
+	cursor: default;
 }
 
 .PartyMember ul li:hover{

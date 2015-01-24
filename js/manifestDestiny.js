@@ -2,8 +2,9 @@ console.log("manifestDestity script connected");
 
 $.ajaxSetup({async: false});
 var heroMani;
+var monsterMani;
 
-function getManifest()
+function getCharManifest()
 {
 	$.getJSON("/js/characterManifest.json", function(charMani)
 	{
@@ -21,4 +22,23 @@ function heroLookup(charMani)
 	console.log("(manifestDestiy/heroLookup) heroMani is ready for use");
 }
 
-getManifest();
+function getMonsterManifest()
+{
+	$.getJSON("/js/monsterManifest.json", function(monMani)
+	{
+		monsterLookup(monMani);   
+	})
+	.fail(function( jqxhr, textStatus, error ) {
+    	var err = textStatus + ", " + error;
+   		console.log( "Request Failed: " + err );
+	});
+}
+
+function monsterLookup(monMani)
+{
+	monsterMani = monMani;
+	console.log("(manifestDestiy/monsterLookup) monsterMani is ready for use");
+}
+
+getCharManifest();
+getMonsterManifest();
