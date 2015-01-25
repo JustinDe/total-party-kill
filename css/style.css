@@ -39,7 +39,6 @@ body, html {
 	background-size: cover;
 	margin-bottom: 40px;
 	position: relative;
-	left: 0;
 	margin-left:0;
 	-webkit-box-shadow: 1px 8px 10px 3px rgba(000,000,000,.5);
 	box-shadow: 1px 8px 10px 3px rgba(000,000,000,.5);
@@ -47,6 +46,16 @@ body, html {
 
 .PartyMemberOff{
 	display: none;
+}
+
+#NewPartyMember.PartyMember ul{
+	right: 100%;
+	left: inherit;
+}
+
+#NewPartyMember{
+	-webkit-box-shadow: 0 0 50px 10px rgba(255,255,0,.6);
+	box-shadow: 0 0 50px 10px rgba(255,255,0,.6);
 }
 
 .PartyMember ul

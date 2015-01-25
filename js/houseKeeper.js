@@ -34,7 +34,7 @@ function newHero()
 {
 	foundNewChar = false;
 	do{
-		var randChar = Math.floor(Math.random() * 9) + 1;
+		var randChar = Math.floor(Math.random() * 6) + 1;
 		if($.inArray(randChar, usedHeros) == -1)
 		{
 			usedHeros.push(randChar);
@@ -73,15 +73,48 @@ function newCombat()
 	}
 	if(numOfEnemies > 3 && numOfEnemies < 6)
 	{
+		//currentMonsters.push(Math.floor(Math.random() * 9) + 1);
 		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
-		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+		foundNewMonster = false;
+		do{
+			var randMonster = Math.floor(Math.random() * 9) + 1;
+			if($.inArray(randMonster, currentMonsters) == -1)
+			{
+				currentMonsters.push(randMonster);
+				console.log("(newCombat) Added " + randMonster + " to currentMonsters list");
+				foundNewMonster = true;
+			}
+		}
+		while(foundNewMonster == false);
 		currentMonsters.push("");
 	}
 	if(numOfEnemies == 6)
 	{
 		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
-		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
-		currentMonsters.push(Math.floor(Math.random() * 9) + 1);
+		
+		foundNewMonster = false;
+		do{
+			var randMonster = Math.floor(Math.random() * 9) + 1;
+			if($.inArray(randMonster, currentMonsters) == -1)
+			{
+				currentMonsters.push(randMonster);
+				console.log("(newCombat) Added " + randMonster + " to currentMonsters list");
+				foundNewMonster = true;
+			}
+		}
+		while(foundNewMonster == false);
+		
+		foundNewMonster2 = false;
+		do{
+			var randMonster = Math.floor(Math.random() * 9) + 1;
+			if($.inArray(randMonster, currentMonsters) == -1)
+			{
+				currentMonsters.push(randMonster);
+				console.log("(newCombat) Added " + randMonster + " to currentMonsters list");
+				foundNewMonster2 = true;
+			}
+		}
+		while(foundNewMonster2 == false);
 	}
 }
 

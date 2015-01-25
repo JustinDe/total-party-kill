@@ -1,10 +1,11 @@
 var attack_ready = false;
 var attack_to_use = 0;
 var block_next_move = false;
+var hidden = [];
 
 //attack_comes_from;
 
-function call_attack(attack_key){
+function call_attack(attack_key, index){
     //attack_comes_from = attack_source;//
     attack_ready = true;
     attack_to_use = attack_key;
@@ -17,9 +18,12 @@ function call_attack(attack_key){
     else if(attack_to_use[0] == "Save Yourself"){
         //This character exits the battle
         console.log("Save Yourseeeeeeeeeelf");
+        hidden.push(index);
+        console.log(hidden);
         attack_to_use[1] = false;
         updateUI();
-        attack_ready = false
+        attack_ready = false;
+
     }
     else if(attack_to_use[0] == "Cleave"){
             //Do 1 damage to all enemies
@@ -44,8 +48,9 @@ function call_attack(attack_key){
     }
 }
 
-function attack_monster(monster_to_attack){
-    if(attack_ready){
+function attack_monster(monster_to_attack, index){
+    //console.log("Monster just clicked " + monster_to_attack);
+    if(attack_ready && monster_to_attack != ""){
         attack_to_use[1] = false;
         updateUI();
         if(attack_to_use[0] == "Strike" 
@@ -108,13 +113,16 @@ function attack_monster(monster_to_attack){
                 console.log("Blizzard on ice enemy");
             }
         }
+        check_if_dead()
         monster_attacks_you();
         attack_ready = false;
         if(monster_to_attack.HP <= 0){
-            monster_to_attack = "";
-            /*console.log(monster_to_attack);
-            console.log(currentMonsters);
-            console.log("Monster should be dead");*/
+            linkingMonster[currentMonsters[index]] = "";
+            updateUI();
+            //console.log(monster_to_attack);
+            //console.log(currentMonsters);
+            //console.log("Monster should be dead");
+            //console.log(linkingMonster[currentMonsters]);
         }
     }
 }
@@ -126,10 +134,10 @@ function monster_attacks_you(){
     }
     else{
         var randHero = Math.floor(Math.random() * 5  ); 
-        while(linkingHero[currentHeros[randHero]] == 0){
+        while(linkingHero[currentHeros[randHero]] == 0 || hidden.indexOf(randHero) != -1){
             randHero = Math.floor(Math.random() * 5  ) + 1;
         }
-        console.log("Hero hit:" + randHero);
+        //console.log("Hero hit:" + randHero);
         while(leave_loop == false){
             var randAttack = Math.floor(Math.random() * 5  ) + 1;
             switch(randAttack){
@@ -173,7 +181,6 @@ function monster_attacks_you(){
                     if(linkingHero[currentHeros[randHero]].RunAway[1] != false){
                         linkingHero[currentHeros[randHero]].RunAway[1] = false
                         leave_loop = true;
-
                         break;
                     }
                     else{
@@ -181,7 +188,26 @@ function monster_attacks_you(){
                     }
                 }
         }
-        console.log("now hero " + randHero + " can't use attack " + randAttack)
+        //console.log("now hero " + randHero + " can't use attack " + randAttack)
+        updateUI();
+        check_if_dead();
+    }
+}
+
+function check_if_dead(){
+    for(i = 0; i < 5; i++){
+        if(linkingHero[currentHeros[i]] == 0){
+
+        }
+        else if(linkingHero[currentHeros[i]].Attack1[1] == false,
+        linkingHero[currentHeros[i]].Attack2[1] == false,
+        linkingHero[currentHeros[i]].Special1[1] == false,
+        linkingHero[currentHeros[i]].Special2[1] == false,
+        linkingHero[currentHeros[i]].RunAway[1] == false){
+            linkingHero[currentHeros[i]] = 0;
+            console.log(linkingHero[currentHeros]);
+            updateUI();
+        }
     }
 }
 

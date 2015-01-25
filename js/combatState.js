@@ -8,11 +8,11 @@ for(var i = 0; i <= currentHeros.length -1; i++)
 		document.getElementById("MemberSlot"+(i+1)).classList.remove("PartyMemberOff");
 		
 		var MemberUl = $('#MemberSlot'+ (i+1)).find('ul');
-	    $(MemberUl).append("<li id='Attack1-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Attack1);'>" + linkingHero[currentHeros[i]].Attack1[0] + "</li>");
-	    $(MemberUl).append("<li id='Attack2-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Attack2);'>" + linkingHero[currentHeros[i]].Attack2[0] + "</li>");
-	    $(MemberUl).append("<li id='Special1-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Special1);'>" + linkingHero[currentHeros[i]].Special1[0] + "</li>");
-	    $(MemberUl).append("<li id='Special2-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Special2);'>" + linkingHero[currentHeros[i]].Special2[0] + "</li>");
-	    $(MemberUl).append("<li id='RunAway-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].RunAway);'>" + linkingHero[currentHeros[i]].RunAway[0] + "</li>");
+	    $(MemberUl).append("<li id='Attack1-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Attack1, "+i+");'>" + linkingHero[currentHeros[i]].Attack1[0] + "</li>");
+	    $(MemberUl).append("<li id='Attack2-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Attack2, "+i+");'>" + linkingHero[currentHeros[i]].Attack2[0] + "</li>");
+	    $(MemberUl).append("<li id='Special1-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Special1, "+i+");'>" + linkingHero[currentHeros[i]].Special1[0] + "</li>");
+	    $(MemberUl).append("<li id='Special2-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].Special2, "+i+");'>" + linkingHero[currentHeros[i]].Special2[0] + "</li>");
+	    $(MemberUl).append("<li id='RunAway-"+currentHeros[i]+"' onclick='call_attack(linkingHero[" + currentHeros[i] + "].RunAway, "+i+");'>" + linkingHero[currentHeros[i]].RunAway[0] + "</li>");
 	}
 	else
 	{
@@ -28,7 +28,7 @@ for(var i = 0; i < 3; i++)
 		document.getElementById("EnemySlot"+(i+1)).style.backgroundImage="url("+ linkingMonster[currentMonsters[i]].Portrait +")";
 		document.getElementById("EnemySlot"+(i+1)).classList.remove("PartyMemberOff");
 		var EnemyDiv = $('#EnemySlot'+ (i+1));
-		$(EnemyDiv).append("<div class='enemyAction' onclick='attack_monster(linkingMonster["+currentMonsters[i]+"]);'></div>");
+		$(EnemyDiv).append("<div id='Enemy-"+currentMonsters[i]+"' class='enemyAction' onclick='attack_monster(linkingMonster["+currentMonsters[i]+"], "+ i +");'></div>");
 
 	}
 	if(currentMonsters[i] == "")
@@ -40,31 +40,41 @@ for(var i = 0; i < 3; i++)
 
 function updateUI()
 {
-	for(var i = 0; i <= currentHeros.length -1; i++)
+	// for(var i = 0; i <= currentHeros.length -1; i++)
+	// {
+	// 	if(linkingHero[currentHeros[i]].Attack1[1] == false)
+	// 	{
+	// 		document.getElementById("Attack1-"+currentHeros[i]).classList.add("Used");
+	// 	}
+	// 	if(linkingHero[currentHeros[i]].Attack2[1] == false)
+	// 	{
+	// 		document.getElementById("Attack2-"+currentHeros[i]).classList.add("Used");
+	// 	}
+	// 	if(linkingHero[currentHeros[i]].Special1[1] == false)
+	// 	{
+	// 		document.getElementById("Special1-"+currentHeros[i]).classList.add("Used");
+	// 	}
+	// 	if(linkingHero[currentHeros[i]].Special2[1] == false)
+	// 	{
+	// 		document.getElementById("Special2-"+currentHeros[i]).classList.add("Used");
+	// 	}
+	// 	if(linkingHero[currentHeros[i]].RunAway[1] == false)
+	// 	{
+	// 		document.getElementById("RunAway-"+currentHeros[i]).classList.add("Used");
+	// 	}
+	// }
+	for(var p = 0; p <= currentMonsters.length -1; p++)
 	{
-		if(linkingHero[currentHeros[i]][1] == false)
+		if(currentMonsters[p] > 0 && linkingMonster[currentMonsters[p]].HP <= 0)
 		{
-			document.getElementById("Attack1-"+currentHeros[i]).classList.add("Used");
-		}
-		if(linkingHero[currentHeros[i]][1] == false)
-		{
-			document.getElementById("Attack2-"+currentHeros[i]).classList.add("Used");
-		}
-		if(linkingHero[currentHeros[i]][1] == false)
-		{
-			document.getElementById("Special1-"+currentHeros[i]).classList.add("Used");
-		}
-		if(linkingHero[currentHeros[i]][1] == false)
-		{
-			document.getElementById("Special2="+currentHeros[i]).classList.add("Used");
-		}
-		if(linkingHero[currentHeros[i]][1] == false)
-		{
-			document.getElementById("RunAway-"+currentHeros[i]).classList.add("Used");
-		}
+			document.getElementById("EnemySlot"+(p+1)).classList.add("Death");
+			// $('#EnemySlot'+(p+1)).addClass('Death').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			// 	$(this).addClass('PartyMemberOff');
+			// });
 
-		//var MemberUlLi = $('#MemberSlot'+ (i+1)).find('ul');
-		//console.log(MemberUlLi);
-		//$MemberUlLi.addClass("Used");
+			//console.log("Enemy Dead = "+currentMonsters[p]);
+		}
 	}
+
+	
 }

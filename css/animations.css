@@ -4,7 +4,7 @@
 }
 
 /* Shake */
-@-webkit-keyframes shake {
+@-webkit-keyframes Shake {
 	0%, 100% {
 		-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
@@ -22,7 +22,7 @@
 
 }
 
-@keyframes shake {
+@keyframes Shake {
 	0%, 100% {
 		-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
@@ -39,9 +39,9 @@
 	}	
 }
 
-.shake {
-  -webkit-animation-name: shake;
-		  animation-name: shake;
+.Shake {
+  -webkit-animation-name: Shake;
+		  animation-name: Shake;
    -webkit-animation-duration: .5s;
 			  animation-duration: .5s;
 	  -webkit-animation-fill-mode: both;
@@ -50,20 +50,20 @@
 /* End Shake */
 
 /* Death */
-@-webkit-keyframes death {
+@-webkit-keyframes Death {
 0%   { opacity: 1; }
   100% { opacity: 0; }
 
 }
 
-@keyframes death {
+@keyframes Death {
 0%   { opacity: 1; }
   100% { opacity: 0; }
 }
 
-.death {
-  -webkit-animation-name: death;
-		  animation-name: death;
+.Death {
+  -webkit-animation-name: Death;
+		  animation-name: Death;
    -webkit-animation-duration: 1s;
 			  animation-duration: 1s;
 	  -webkit-animation-fill-mode: both;
