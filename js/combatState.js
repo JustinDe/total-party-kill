@@ -21,19 +21,19 @@ for(var i = 0; i <= currentHeros.length -1; i++)
 
 }
 
-for(var i = 0; i < 3; i++)
+for(var p = 0; p < 3; p++)
 {
-	if(currentMonsters[i] != 0)
+	if(currentMonsters[p] != 0)
 	{
-		document.getElementById("EnemySlot"+(i+1)).style.backgroundImage="url("+ linkingMonster[currentMonsters[i]].Portrait +")";
-		document.getElementById("EnemySlot"+(i+1)).classList.remove("PartyMemberOff");
+		document.getElementById("EnemySlot"+(p+1)).style.backgroundImage="url("+ linkingMonster[currentMonsters[p]].Portrait +")";
+		document.getElementById("EnemySlot"+(p+1)).classList.remove("PartyMemberOff");
+		var EnemyDiv = $('#EnemySlot'+ (p+1));
+		$(EnemyDiv).append("<div class='enemyAction' onclick='attack_monster(linkingMonster[currentMonsters[p]])'></div>");
 
-		var EnemyDiv = $('#EnemySlot'+ (i+1));
-		$(EnemyDiv).append("<div class='enemyAction' onclick='attack_monster(linkingMonster[currentMonsters[i]]'></div>");
 	}
-	if(currentMonsters[i] == "")
+	if(currentMonsters[p] == "")
 	{
-		document.getElementById("EnemySlot"+(i+1)).classList.add("PartyMemberOff");
+		document.getElementById("EnemySlot"+(p+1)).classList.add("PartyMemberOff");
 	}
 
 }
