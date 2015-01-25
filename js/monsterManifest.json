@@ -61,5 +61,12 @@
 		"HP": "3",
 		"Element": "Fire",
 		"Portrait": "/images/guard/strongred.jpg"
+	},
+		"Enemy10":
+	{
+		"Name": "DickButt3_Chest",
+		"HP": "1",
+		"Element": "None",
+		"Portrait": "/images/guard/chest.png"
 	}
 }

@@ -142,10 +142,16 @@ function loadBark(inTxt, enemyHit)
 	console.log("BarkText: " + inTxt);
 	console.log("enemy Hit: " + enemyHit);
 	document.getElementById("barkText").innerHTML = inTxt;
-	document.getElementById("barkText").classList.add("Death");
+	//document.getElementById("barkText").classList.add("Death");
+	$('#barkText').removeClass('Death').addClass('Death').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+		$('#barkText').removeClass('Death');
+	});
 	if(enemyHit == 0)
 	{
-		document.getElementById("EnemySlot"+(parseInt(enemyHit)+1)).classList.add("Shake");
+		//document.getElementById("EnemySlot"+(parseInt(enemyHit)+1)).classList.add("Shake");
+		$('#EnemySlot'+(parseInt(enemyHit)+1)).removeClass('Shake').addClass('Shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$('#EnemySlot'+(parseInt(enemyHit)+1)).removeClass('Shake');
+		});
 
 	}
 	if(enemyHit == 1)
