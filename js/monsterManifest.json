@@ -4,62 +4,62 @@
 		"Name": "DickButt1_None",
 		"HP": "1",
 		"Element": "None",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/weakyellow.jpg"
 	},
 	"Enemy02":
 	{
 		"Name": "DickButt2_Ice",
 		"HP": "1",
 		"Element": "Ice",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/weakblue.jpg"
 	},
 	"Enemy03":
 	{
 		"Name": "DickButt3_Fire",
 		"HP": "1",
 		"Element": "Fire",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/weakred.jpg"
 	},
 	"Enemy04":
 	{
 		"Name": "DickButt2_None",
 		"HP": "2",
 		"Element": "None",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/noramlyellow.jpg"
 	},
 	"Enemy05":
 	{
 		"Name": "DickButt2_Ice",
 		"HP": "2",
 		"Element": "Ice",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/normalblue.jpg"
 	},
 	"Enemy06":
 	{
 		"Name": "DickButt2_Fire",
 		"HP": "2",
 		"Element": "Fire",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/normalred.jpg"
 	},
 	"Enemy07":
 	{
 		"Name": "DickButt3_None",
 		"HP": "3",
 		"Element": "None",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/strongyellow.jpg"
 	},
 	"Enemy08":
 	{
 		"Name": "DickButt3_Ice",
 		"HP": "3",
 		"Element": "Ice",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/strongblue.jpg"
 	},
 	"Enemy09":
 	{
 		"Name": "DickButt3_Fire",
 		"HP": "3",
 		"Element": "Fire",
-		"Portrait": "/images/guard/guardTest.jpg"
+		"Portrait": "/images/guard/strongred.jpg"
 	}
 }

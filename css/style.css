@@ -6,8 +6,7 @@ body, html {
 #GameBoard{
 	width: 100%;
 	height: 100%;
-	background: url('http://fc04.deviantart.net/fs44/i/2009/134/9/0/Stone_Dungeon_Floor_by_pfunked.jpg') top center;
-	background-size: cover;
+	background: url('/images/ui/bgtitle.jpg') top center;
 	display: table;
 	overflow: hidden;
 }
@@ -154,23 +153,60 @@ body, html {
 	position: absolute;
 	top: 0;
 	left: 0;
-	text-align: center;
+	text-align: left;
 	height: 100%;
 	width: 100%;
-	display: none;
 	color: #fff;
-	background: rgba(0,0,0,.8);
+	background: rgba(0,0,0,.9);
 }
 
 #titleScreen p{
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 52px;
+	font-size: 16px;
+	padding:0 600px 0 200px;
 }
 
 #playGame{
 	display: block;
 	font-size: 32px;
 	cursor: pointer;
+}
+
+.Play{
+	display: none;
+}
+
+#scoreScreen{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	display: none;
+	color: #fff;
+	background: url('/images/ui/scorescreen.jpg') no-repeat top center;
+	background-size: cover;
+}
+
+#scoreScreen a,#scoreScreen a:hover,#scoreScreen a:active{
+	color: #fff;
+}
+
+#barkText{
+	position: absolute;
+	top: 42%;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	font-size: 32px;
+	text-shadow: 1px 1px 4px #000000;
+}
+
+.title{
+	display: block;
+	font-size: 52px;
 }

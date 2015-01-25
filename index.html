@@ -11,8 +11,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="../js/manifestDestiny.js"></script>
 	<script src="../js/houseKeeper.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	
+	  ga('create', 'UA-58929527-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 </head>
 <body>
 	<div id="GameBoard">
@@ -56,16 +64,39 @@
 		</div>
 
 	</div>
+<div id="barkText">I WILL DESTROY YOU WITH MAGIC!!!</div>
 
 <div id="titleScreen">
 	<p>
-	Welcome to the game fucker
+	<span class="title">TPK</span>
+	Your world has decided it has no need for you.<Br/><br/>
+
+No need for all its adventurers, all its heroes and legends. It has shaken you off, stripped you of your experience and strength, and shattered your artifacts.<Br/><br/>
+
+You find yourself abandoned in the halls of the world’s creation. The Palace of Powers Absent, where you and your kind, all but mortal, are kept by implacable jailers.<Br/><br/>
+
+Then, a crash. Some bold warrior has used the last of his energy to breach the wall of your eternal quarters.<Br/><br/>
+
+He's given you a chance to escape.
+<Br/><br/>
 	<span id="playGame">Click here to begin</span>
 	</p>
 </div>
+
+<div id="scoreScreen">
+	<p>
+	<h1>You scuk</h1>
+	<a href="http://104.131.179.249/">Click here to playagain</a>
+	</p>
+</div>
+
 <script>
 	$( ".PartyMember" ).click(function() {
 	$( this).toggleClass( "Open" );
+	});
+
+	$( "#playGame" ).click(function() {
+	$( "#titleScreen").addClass( "Play" );
 	});
 	
 	(function($){
@@ -88,20 +119,9 @@
 
 	})(jQuery);
 
-	$.playSoundloop('http://104.131.179.249/sound/theme');
+	//$.playSoundloop('http://104.131.179.249/sound/theme');
 </script>
 <script src="../js/combat_engine.js"></script>
 <script src="../js/combatState.js"></script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-58929527-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>

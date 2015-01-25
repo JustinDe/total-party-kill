@@ -36,6 +36,7 @@ function getMonsterManifest()
 
 function monsterLookup(monMani)
 {
+	monsterMani = {};
 	monsterMani = monMani;
 	console.log("(manifestDestiy/monsterLookup) monsterMani is ready for use");
 }
