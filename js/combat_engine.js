@@ -7,13 +7,15 @@ var hidden = [];
 
 function call_attack(attack_key, index){
     //attack_comes_from = attack_source;//
+    console.log(attack_key);
     attack_ready = true;
     attack_to_use = attack_key;
     if(attack_key[1] == false){
         //already_used();
         alert("This move has been used. Pick a different one");
         $(attack_key[1]).addClass('Used');
-        attack_ready = false
+        attack_ready = false;
+        check_if_dead()
     }
     else if(attack_to_use[0] == "Save Yourself"){
         //This character exits the battle
@@ -23,7 +25,7 @@ function call_attack(attack_key, index){
         attack_to_use[1] = false;
         updateUI();
         attack_ready = false;
-
+        check_if_dead()
     }
     else if(attack_to_use[0] == "Cleave"){
             //Do 1 damage to all enemies
@@ -43,6 +45,7 @@ function call_attack(attack_key, index){
             attack_to_use[1] = false;
             updateUI();
             attack_ready = false
+            check_enemy_death()
             monster_attacks_you();
             //console.log("Cleave");
     }
@@ -114,16 +117,45 @@ function attack_monster(monster_to_attack, index){
             }
         }
         check_if_dead()
+        check_enemy_death();
         monster_attacks_you();
         attack_ready = false;
-        if(monster_to_attack.HP <= 0){
-            linkingMonster[currentMonsters[index]] = "";
-            updateUI();
+        updateUI();
             //console.log(monster_to_attack);
             //console.log(currentMonsters);
             //console.log("Monster should be dead");
             //console.log(linkingMonster[currentMonsters]);
+        
+    }
+}
+
+function check_enemy_death(){
+    if(linkingMonster[currentMonsters[0]] != undefined){
+        if(linkingMonster[currentMonsters[0]].HP <= 0){
+            currentMonsters[0] = "";
+            //linkingMonster[currentMonsters[0]] = "";
+            console.log(currentMonsters)
         }
+    }
+    if(linkingMonster[currentMonsters[1]] != undefined){
+        if(linkingMonster[currentMonsters[1]].HP <= 0){
+            currentMonsters[1] = "";
+            //linkingMonster[currentMonsters[1]] = "";
+            console.log(currentMonsters)
+        }
+    }
+    if(linkingMonster[currentMonsters[2]] != undefined){
+        if(linkingMonster[currentMonsters[2]].HP <= 0){
+            currentMonsters[2] = "";
+            //linkingMonster[currentMonsters[2]] = "";
+            console.log(currentMonsters)
+        }
+    }
+    if(linkingMonster[currentMonsters[0]] == undefined
+                    && linkingMonster[currentMonsters[1]] == undefined 
+                    && linkingMonster[currentMonsters[2]] == undefined){
+        console.log("ALL DEAD");
+        updateUI();
     }
 }
 
@@ -134,7 +166,7 @@ function monster_attacks_you(){
     }
     else{
         var randHero = Math.floor(Math.random() * 5  ); 
-        while(linkingHero[currentHeros[randHero]] == 0 || hidden.indexOf(randHero) != -1){
+        while(currentHeros[randHero] == 0 || hidden.indexOf(randHero) != -1){
             randHero = Math.floor(Math.random() * 5  ) + 1;
         }
         //console.log("Hero hit:" + randHero);
@@ -196,16 +228,17 @@ function monster_attacks_you(){
 
 function check_if_dead(){
     for(i = 0; i < 5; i++){
-        if(linkingHero[currentHeros[i]] == 0){
-
+        if(currentHeros[i]== 0){
+            console.log("You hit a weird already dead state")
         }
-        else if(linkingHero[currentHeros[i]].Attack1[1] == false,
-        linkingHero[currentHeros[i]].Attack2[1] == false,
-        linkingHero[currentHeros[i]].Special1[1] == false,
-        linkingHero[currentHeros[i]].Special2[1] == false,
+        else if(linkingHero[currentHeros[i]].Attack1[1] == false &&
+        linkingHero[currentHeros[i]].Attack2[1] == false &&
+        linkingHero[currentHeros[i]].Special1[1] == false &&
+        linkingHero[currentHeros[i]].Special2[1] == false &&
         linkingHero[currentHeros[i]].RunAway[1] == false){
-            linkingHero[currentHeros[i]] = 0;
-            console.log(linkingHero[currentHeros]);
+            currentHeros[i] = 0;
+            console.log("The person at " + i + " died!");
+            console.log(currentHeros);
             updateUI();
         }
     }

@@ -40,29 +40,33 @@ for(var i = 0; i < 3; i++)
 
 function updateUI()
 {
-	// for(var i = 0; i <= currentHeros.length -1; i++)
-	// {
-	// 	if(linkingHero[currentHeros[i]].Attack1[1] == false)
-	// 	{
-	// 		document.getElementById("Attack1-"+currentHeros[i]).classList.add("Used");
-	// 	}
-	// 	if(linkingHero[currentHeros[i]].Attack2[1] == false)
-	// 	{
-	// 		document.getElementById("Attack2-"+currentHeros[i]).classList.add("Used");
-	// 	}
-	// 	if(linkingHero[currentHeros[i]].Special1[1] == false)
-	// 	{
-	// 		document.getElementById("Special1-"+currentHeros[i]).classList.add("Used");
-	// 	}
-	// 	if(linkingHero[currentHeros[i]].Special2[1] == false)
-	// 	{
-	// 		document.getElementById("Special2-"+currentHeros[i]).classList.add("Used");
-	// 	}
-	// 	if(linkingHero[currentHeros[i]].RunAway[1] == false)
-	// 	{
-	// 		document.getElementById("RunAway-"+currentHeros[i]).classList.add("Used");
-	// 	}
-	// }
+	console.log("Enter updateUI");
+	for(var i = 0; i <= currentHeros.length -1; i++)
+	{
+		if(currentHeros[i] != 0)
+		{
+			if(linkingHero[currentHeros[i]].Attack1[1] == false)
+			{
+				document.getElementById("Attack1-"+currentHeros[i]).classList.add("Used");
+			}
+			if(linkingHero[currentHeros[i]].Attack2[1] == false)
+			{
+				document.getElementById("Attack2-"+currentHeros[i]).classList.add("Used");
+			}
+			if(linkingHero[currentHeros[i]].Special1[1] == false)
+			{
+				document.getElementById("Special1-"+currentHeros[i]).classList.add("Used");
+			}
+			if(linkingHero[currentHeros[i]].Special2[1] == false)
+			{
+				document.getElementById("Special2-"+currentHeros[i]).classList.add("Used");
+			}
+			if(linkingHero[currentHeros[i]].RunAway[1] == false)
+			{
+				document.getElementById("RunAway-"+currentHeros[i]).classList.add("Used");
+			}
+		}
+	}
 	for(var p = 0; p <= currentMonsters.length -1; p++)
 	{
 		if(currentMonsters[p] > 0 && linkingMonster[currentMonsters[p]].HP <= 0)
@@ -76,5 +80,12 @@ function updateUI()
 		}
 	}
 
+	for(var i = 0; i <= currentHeros.length -1; i++)
+	{
+		if(currentHeros[i] == 0)
+		{
+			document.getElementById("MemberSlot"+(i+1)).classList.add("PartyMemberOff");
+		}
+	}
 	
 }
