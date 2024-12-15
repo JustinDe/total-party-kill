@@ -6,7 +6,7 @@ var monsterMani;
 
 function getCharManifest()
 {
-	$.getJSON("/js/characterManifest.json", function(charMani)
+	$.getJSON("characterManifest.json", function(charMani)
 	{
 		heroLookup(charMani);   
 	})
@@ -24,7 +24,7 @@ function heroLookup(charMani)
 
 function getMonsterManifest()
 {
-	$.getJSON("/js/monsterManifest.json", function(monMani)
+	$.getJSON("monsterManifest.json", function(monMani)
 	{
 		monsterLookup(monMani);   
 	})
