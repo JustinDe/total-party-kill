@@ -18,7 +18,7 @@
 	    "ChestBark":"I can use that.",
 	    "AbandonedBark":"...I guess you're right. Go then. Maybe we'll meet again.",
 	    "DeathBark":"This can't... I can't... no...",
-	    "Portrait": "/images/character/fighter3.jpg"
+	    "Portrait": "images/character/fighter3.jpg"
 	},
 	"Hero02":
 	{
@@ -39,7 +39,7 @@
 		"ChestBark":"Give that here.",
 		"AbandonedBark":"Leaving? Go on then. I can still fight. I'll gather your bones where I find them.",
 		"DeathBark":"Ungh... that one's... past the armor...",
-		"Portrait": "/images/character/fighter2.jpg"
+		"Portrait": "images/character/fighter2.jpg"
 	},
 	"Hero03":
 	{
@@ -60,7 +60,7 @@
 		"ChestBark":"Supplies, eh? Just in time.",
 		"AbandonedBark":"Go on. You'll be fine without me. I'll hold this passage for as long as I can. ",
 		"DeathBark":"This is it! All I have left!",
-		"Portrait": "/images/character/fighter1.jpg"
+		"Portrait": "images/character/fighter1.jpg"
 	},
 	"Hero04":
 	{
@@ -81,7 +81,7 @@
 		"ChestBark":"How precious...",
 		"AbandonedBark":"I see. So this is my fate. But I wonder, what will become of you?",
 		"DeathBark":"Go! You must reach the end without me!",
-		"Portrait": "/images/character/mage2.jpg"
+		"Portrait": "images/character/mage2.jpg"
 	},
 	"Hero05":
 	{
@@ -102,7 +102,7 @@
 		"ChestBark":"Ah, what luck!",
 		"AbandonedBark":"I will not be put aside so brusquely. Pray that your paths do not cross mine ever again.",
 		"DeathBark":"This I give... and nothing more.",
-		"Portrait": "/images/character/mage1.jpg"
+		"Portrait": "images/character/mage1.jpg"
 	},
 	"Hero06":
 	{
@@ -123,6 +123,6 @@
 		"ChestBark":"Ha! What a find!",
 		"AbandonedBark":"What? No! You can't leave me! Not like this!",
 		"DeathBark":"Oh... oh no... not like this...",
-		"Portrait": "/images/character/thief.jpg"
+		"Portrait": "images/character/thief.jpg"
 	}
 }
